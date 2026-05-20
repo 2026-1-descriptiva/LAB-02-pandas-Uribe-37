@@ -4,9 +4,11 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 `tbl2.tsv`. En este laboratorio solo puede utilizar las funciones y 
 librerias de pandas para resolver las preguntas.
 """
-
+import pandas as pd
 
 def pregunta_13():
+    df_merge = pd.merge(pd.read_table("files/input/tbl0.tsv", sep="\t"), pd.read_table("files/input/tbl2.tsv", sep="\t"), on="c0")
+    return df_merge.groupby("c1")["c5b"].sum()
     """
     Si la columna `c0` es la clave en los archivos `tbl0.tsv` y `tbl2.tsv`,
     compute la suma de `tbl2.c5b` por cada valor en `tbl0.c1`.
