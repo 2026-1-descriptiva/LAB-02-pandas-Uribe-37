@@ -7,7 +7,7 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_06():
-    df_unique_values = pd.read_table(r"files\input\tbl1.tsv", sep="\t")["c4"].str.upper().unique()
+    df_unique_values = pd.read_table("files/input/tbl1.tsv", sep="\t")["c4"].str.upper().unique()
     return sorted(df_unique_values)
     """
     Retorne una lista con los valores unicos de la columna `c4` del archivo

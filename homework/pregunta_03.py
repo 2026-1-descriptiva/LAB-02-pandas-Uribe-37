@@ -7,7 +7,7 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_03():
-    df_records = pd.read_table(r"files\input\tbl0.tsv", sep="\t")
+    df_records = pd.read_table("files/input/tbl0.tsv", sep="\t")
     df_grouped = df_records.groupby("c1").size()
     return df_grouped
     """

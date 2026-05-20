@@ -7,7 +7,7 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_08():
-    df_old = pd.read_table(r"files\input\tbl0.tsv", sep="\t")
+    df_old = pd.read_table("files/input/tbl0.tsv", sep="\t")
     df_new = df_old.copy()
     df_new["suma"] = df_old["c0"].astype(int) + df_old["c2"].astype(int)
     return df_new

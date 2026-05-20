@@ -7,7 +7,7 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_05():
-    df_max_values = pd.read_table(r"files\input\tbl0.tsv", sep="\t").groupby("c1")["c2"].max()
+    df_max_values = pd.read_table("files/input/tbl0.tsv", sep="\t").groupby("c1")["c2"].max()
     return df_max_values
     """
     Calcule el valor máximo de `c2` por cada letra en la columna `c1` del
